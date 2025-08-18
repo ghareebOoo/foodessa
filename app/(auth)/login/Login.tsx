@@ -134,9 +134,11 @@ export default function Login() {
                 <Image src={image} alt='image' width={500} height={500} className='w-full h-screen object-cover' />
             </div>
             <div className='w-full md:px-4'>
-                <h2 className='text-tertiary font-bold text-2xl'>Login</h2>
+               
 
                 {!showLogin &&  <form onSubmit={formikRegister.handleSubmit} className='mt-3'>
+
+                    <h2 className='text-tertiary font-bold text-2xl'>Register</h2>
 
                     <div className='w-full md:max-w-[450px] flex flex-col gap-1'>
                         <label className='text-tertiary font-normal text-base'>Name</label>
@@ -179,6 +181,8 @@ export default function Login() {
                 </form> }
 
                 {showLogin &&  <form onSubmit={formikLogin.handleSubmit} className='mt-3'>
+
+                    <h2 className='text-tertiary font-bold text-2xl'>Login</h2>
 
 
                     <div className='w-full md:max-w-[450px] mt-1 flex flex-col gap-1'>
