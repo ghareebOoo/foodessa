@@ -1,5 +1,5 @@
 "use client"
-import { useFoodContext } from '@/context/FoodContext'
+import { useFoodContext } from '@/app/(site)/context/FoodContext'
 import {Pagination , Autoplay} from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';

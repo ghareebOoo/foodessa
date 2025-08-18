@@ -1,7 +1,7 @@
 "use client";
 import React, { createContext, useCallback, useContext, useEffect, useState } from 'react';
-import {foods , categories} from "../public/src/assets/data";
-import {Foods} from "../types";
+import {foods , categories} from "../../../public/src/assets/data";
+import {Foods} from "../../../types";
 import { useRouter } from 'next/navigation';
 
 type ChooseSizeState = {

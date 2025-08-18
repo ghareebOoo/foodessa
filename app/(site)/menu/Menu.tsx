@@ -5,7 +5,7 @@ import { ImExit } from "react-icons/im";
 import {categories} from "../../../public/src/assets/data"
 import Image from 'next/image';
 import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue,} from "@/components/ui/select"
-import { useFoodContext } from '@/context/FoodContext';
+import { useFoodContext } from '@/app/(site)/context/FoodContext';
 import Loading from '@/components/Loading';
 import { FaStar } from 'react-icons/fa6';
 import { BiCartAdd } from 'react-icons/bi';

@@ -9,7 +9,7 @@ import { FaCartShopping } from "react-icons/fa6";
 import { FaSearch , FaRegWindowClose } from "react-icons/fa";
 import { CiUser } from "react-icons/ci";
 import { CgMenuLeft } from "react-icons/cg";
-import { useFoodContext } from '@/context/FoodContext'
+import { useFoodContext } from '@/app/(site)/context/FoodContext'
 
 
 import { FaUserSecret } from "react-icons/fa";

@@ -1,6 +1,6 @@
 
 import Header from "@/components/Header";
-import FoodContextProvider from "@/context/FoodContext";
+import FoodContextProvider from "@/app/(site)/context/FoodContext";
 import Footer from "@/components/Footer";
 
 

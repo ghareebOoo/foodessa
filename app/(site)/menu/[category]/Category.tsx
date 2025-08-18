@@ -1,5 +1,5 @@
 "use client"
-import { useFoodContext } from '@/context/FoodContext'
+import { useFoodContext } from '@/app/(site)/context/FoodContext'
 import Image from 'next/image'
 import React from 'react'
 import { BiCartAdd } from 'react-icons/bi'
