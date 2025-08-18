@@ -9,7 +9,7 @@ type ChooseSizeState = {
 };
 
 type ourOrder = {
-    [itemId: string]: number; 
+  [itemId: string]: number; 
 }
 
 
@@ -55,6 +55,7 @@ export default function FoodContextProvider({children}:{children: React.ReactNod
       if (savedToken) {
         setToken(savedToken);
       }
+      setCartReady(true)
     }, []);
 
   

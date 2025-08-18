@@ -92,14 +92,14 @@ export default function Header() {
                 </div> : <div>Loading...</div>}
                
 
-               {token ? <div onClick={()=>{setToken(null); localStorage.removeItem("token")}} className='cursor-pointer transition-all duration-700 py-2 px-2 md:px-4 rounded-full hover:bg-primary flex items-center gap-3 border-[1px] border-tertiary'>
-                <span className='text-tertiary font-normal text-[12px] md:text-base'>Log out</span> 
-                <FaUserSecret className='text-1xl text-tertiary'/>
-            </div> :     <Link href={"/login"} className='cursor-pointer transition-all duration-700 py-2 px-2 md:px-4 rounded-full hover:bg-primary flex items-center gap-3 border-[1px] border-tertiary'>
-                    <span className='text-tertiary font-normal text-[12px] md:text-base'>Login</span>
-                    <CiUser className='text-1xl text-tertiary'/>
-                </Link>}         
-
+                {cartReady ? ( token ? ( <div onClick={() => { setToken(null); localStorage.removeItem("token");}} className="cursor-pointer transition-all duration-700 py-2 px-2 md:px-4 rounded-full hover:bg-primary flex items-center gap-3 border-[1px] border-tertiary">
+                    <span className="text-tertiary font-normal text-[12px] md:text-base">Log out</span>
+                    <FaUserSecret className="text-1xl text-tertiary" /></div>) : 
+                    (<Link href={"/login"} className="cursor-pointer transition-all duration-700 py-2 px-2 md:px-4 rounded-full hover:bg-primary flex items-center gap-3 border-[1px] border-tertiary">
+                    <span className="text-tertiary font-normal text-[12px] md:text-base">Login</span>
+                    <CiUser className="text-1xl text-tertiary" /></Link>)) : 
+                    (<div>Loading...</div> )
+                }
             </div>
 
         </div>
