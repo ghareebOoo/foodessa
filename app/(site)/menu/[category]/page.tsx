@@ -1,9 +1,9 @@
 import React from 'react'
 import Category from './Category'
 
-export default async function Page({params}:{params: {category: string}}) {
+export default function Page({params}:{params: {category: string}}) {
 
-    const {category} = await params
+    const {category} = params
   return (
     <div>
         <Category category={category}/>
