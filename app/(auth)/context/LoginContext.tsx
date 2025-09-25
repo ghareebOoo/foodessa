@@ -16,10 +16,15 @@ export const LoginContext = createContext<props | undefined>(undefined)
 export default function LoginContextProvider({children}:{children: React.ReactNode}) {
 
 
-  const [token , setToken] = useState(localStorage.getItem("token"))
+  const [token , setToken] = useState<string | null>(null)
 
   
-
+  useEffect(()=>{
+    const savedToken = localStorage.getItem("token");
+    if(savedToken){
+      setToken(token)
+    }
+  },[token])
 
   useEffect(() => {
     if (token) {

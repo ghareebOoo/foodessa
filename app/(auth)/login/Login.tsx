@@ -5,7 +5,7 @@ import image from "../../../public/src/assets/admin/login.png"
 import Link from 'next/link'
 import * as yup from "yup"
 import toast from "react-hot-toast";
-import axios from 'axios'
+import axios , {AxiosError} from 'axios'
 import {useFormik} from "formik"
 import { useRouter } from 'next/navigation'
 import { useLoginContext } from '../context/LoginContext'
@@ -15,7 +15,7 @@ export default function Login() {
 
     const [showLogin , setShowLogin] = useState(true)
 
-    const [errorMsg , setErrorMsg] = useState(null)
+    const [errorMsg , setErrorMsg] = useState("")
 
    const router = useRouter()
 
@@ -67,10 +67,15 @@ export default function Login() {
                 toast.success("user created successfully")
                 setShowLogin(true)
             }
-        }catch(error:any){
+        }catch(err){
             toast.dismiss(id)
-            setErrorMsg(error.response.data.message)
-            console.log(error)
+            const error = err as AxiosError<{ message: string }>;
+
+            if (error.response?.data?.message) {
+                setErrorMsg(error.response.data.message);
+            } else {
+                setErrorMsg("Something went wrong");
+            }
         }
     } 
 
@@ -96,10 +101,15 @@ export default function Login() {
                 toast.success("you are logedin successfully")
                 router.push("/")
             }
-        }catch(error:any){
+        }catch(err){
             toast.dismiss(id)
-            setErrorMsg(error.response.data.message)
-            console.log(error)
+            const error = err as AxiosError<{ message: string }>;
+
+            if (error.response?.data?.message) {
+                setErrorMsg(error.response.data.message);
+            } else {
+                setErrorMsg("Something went wrong");
+            }
         }
     } 
 

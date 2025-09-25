@@ -91,7 +91,7 @@ export default function FoodContextProvider({children}:{children: React.ReactNod
             router.push(`/menu/${value}`);
         }else {
             if (searchMain.trim() !== ""){
-                router.push("/notfound");
+              router.push("/notfound");
             }
         }
         setShowInput(false);   
